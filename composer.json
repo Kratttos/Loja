@@ -1,0 +1,12 @@
+{
+    "name": "everton/loja",
+    "description": "Trabalho Pw",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\" : "app/"
+        }
+    }
+}

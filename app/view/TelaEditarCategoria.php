@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/TelaCategoria.css" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <?php
+    
+    readfile("Topo.html");
+   
+    $codigo = $_GET['codigo'];
+    $descricao = $_GET['descricao'];
+    
+    ?>
+
+    <div class="container centralizar">
+        <form action="./../EditarCategoria.php" method="POST">
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label>Nome da Categoria</label>
+                    <input class="form-control" type="text" name="descricao" id="descricao" value="<?php echo htmlspecialchars($descricao); ?>">
+                    <input class="form-control" type="hidden" id="codigo" name="codigo" value="<?php echo htmlspecialchars($codigo); ?>">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <button class="btn btn-danger float-left mx-1" type="reset">Cancelar</button>
+                    <a href="./TelaCategoria.php" class="btn btn-primary">Voltar</a>
+                    <button class="btn btn-success float-right" type="submit">Salvar</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
