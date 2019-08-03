@@ -13,7 +13,7 @@
     ?>
 
     <div class="container centralizar">
-        <form action="./../InserirCategoria.php" method="POST" id="Form">
+        <form action="./../Router.php" method="POST" id="Form">
             <div class="row form-group">
                 <div class="col-md-12">
                     <label>Nome da Categoria</label>
@@ -27,7 +27,8 @@
                     <button class="btn btn-success float-right" type="submit">Salvar</button>
                 </div>
             </div>
-
+            <input type="hidden" name="class" id="class" value="Categoria">
+            <input type="hidden" name="metodo" id="metodo" value="inserir">
         </form>
     </div>
 

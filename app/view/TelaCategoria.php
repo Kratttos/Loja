@@ -36,7 +36,7 @@
                         <tr>
                             <td>' .  $vetor[$i]->descricao   . '</td>
                             <td><a class="btn btn-primary" href="./TelaEditarCategoria.php?codigo=' . $vetor[$i]->cdcategoria . '&descricao=' . $vetor[$i]->descricao . '">Editar</a></td>
-                            <td><a class="btn btn-danger"  href="./../ExcluirCategoria.php?categoria=' . $vetor[$i]->cdcategoria . '">Excluir</a></td>
+                            <td><a class="btn btn-danger"  href="./../Router.php?class=Categoria&metodo=excluir&categoria=' . $vetor[$i]->cdcategoria . '">Excluir</a></td>
                         ');
                     if ($i == (sizeof($vetor) - 1)) {
                         echo ('

@@ -9,4 +9,5 @@ class Anuncio
     public $quantidade;
     public $valor;
     public $categoria;
+    public $nomeCategoria;
 }

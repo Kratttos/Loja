@@ -11,16 +11,16 @@
 <body>
 
     <?php
-    
+
     readfile("Topo.html");
-   
+
     $codigo = $_GET['codigo'];
     $descricao = $_GET['descricao'];
-    
+
     ?>
 
     <div class="container centralizar">
-        <form action="./../EditarCategoria.php" method="POST">
+        <form action="./../Router.php" method="POST">
             <div class="row form-group">
                 <div class="col-md-12">
                     <label>Nome da Categoria</label>
@@ -35,7 +35,8 @@
                     <button class="btn btn-success float-right" type="submit">Salvar</button>
                 </div>
             </div>
-
+            <input type="hidden" name="class" id="class" value="Categoria">
+            <input type="hidden" name="metodo" id="metodo" value="alterar">
         </form>
     </div>
 

@@ -15,7 +15,7 @@
     use app\dao\CategoriaDao;
     ?>
     <div class="container centralizar">
-        <form action="./../InserirAnuncio.php" method="POST">
+        <form action="./../Router.php" method="POST">
             <div class="row form-group">
                 <div class="col-md-6">
                     <label>Titulo Anuncio</label>
@@ -57,6 +57,8 @@
                     <button class="btn btn-success float-right" type="submit">Salvar</button>
                 </div>
             </div>
+            <input type="hidden" name="class" id="class" value="Anuncio">
+            <input type="hidden" name="metodo" id="metodo" value="inserir">
         </form>
     </div>
 

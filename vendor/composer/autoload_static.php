@@ -21,6 +21,9 @@ class ComposerStaticInit2697d608eaae5e15d0fee874a3223870
     );
 
     public static $classMap = array (
+        'app\\controle\\AnuncioControle' => __DIR__ . '/../..' . '/app/controle/AnuncioControle.php',
+        'app\\controle\\CategoriaControle' => __DIR__ . '/../..' . '/app/controle/CategoriaControle.php',
+        'app\\controle\\IControle' => __DIR__ . '/../..' . '/app/controle/IControle.php',
         'app\\dao\\AnuncioDao' => __DIR__ . '/../..' . '/app/dao/AnuncioDao.php',
         'app\\dao\\CategoriaDao' => __DIR__ . '/../..' . '/app/dao/CategoriaDao.php',
         'app\\dao\\Dao' => __DIR__ . '/../..' . '/app/dao/Dao.php',

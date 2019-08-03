@@ -11,6 +11,9 @@
 <body>
     <?php
     readfile("Topo.html");
+    require('./../../vendor/autoload.php');
+
+    use app\dao\AnuncioDao;
    
     $dao = new AnuncioDao();
     $anuncio = $_GET['anuncio'];
