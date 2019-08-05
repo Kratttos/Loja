@@ -14,14 +14,14 @@
     require('./../../vendor/autoload.php');
 
     use app\dao\AnuncioDao;
-   
+    $cd = $_GET['anuncio'];
+
     $dao = new AnuncioDao();
-    $anuncio = $_GET['anuncio'];
-    $anuncio = (object) $dao->buscarAnuncio((int) $anuncio);
-    $cat = new CategoriaDao();
-    $ob = $cat->buscarCategoria($anuncio->categoria);
-    session_start();
-    $_SESSION['CdAnuncio'] = $anuncio->CdAnuncio;
+    $anuncio = $dao->listarAnuncioporCodigo($cd);
+    echo '<br>';
+    var_dump($anucio);
+   
+    
     ?>
 
     <div class="container centralizar">
@@ -39,7 +39,7 @@
             <div class="row form-group">
                 <div class="col-md-6">
                     <label>Categoria</label>
-                    <input class="form-control" type="text" name="valor" id="valor" value="<?php echo ($ob->cdcategoria) ?>" readonly>
+                    <input class="form-control" type="text" name="valor" id="valor" value="<?php echo ($anuncio->nomeCategoria) ?>" readonly>
 
                 </div>
                 <div class="col-md-6">
@@ -56,7 +56,7 @@
             <div class="row form-group">
                 <div class="col-md-12">
                     <button class="btn btn-danger float-left mx-1" type="reset">Cancelar</button>
-                    <a href="/lojinha/index.php" class="btn btn-primary">Voltar</a>
+                    <a href="./TelaAnuncio.php" class="btn btn-primary">Voltar</a>
                     <button class="btn btn-success float-right" type="submit">Comprar</button>
                 </div>
             </div>

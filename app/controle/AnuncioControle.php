@@ -46,8 +46,6 @@ class AnuncioControle implements IControle
         $dao = new AnuncioDao();
         $dao->alterarAnuncio($anuncio);
         
-      
-
         header("location: http://localhost/loja/app/view/TelaAnuncio.php");
         die();    
     }
