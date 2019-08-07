@@ -38,7 +38,7 @@
             <div class="row form-group">
                 <div class="col-md-12">
                     <button class="btn btn-danger float-left mx-1" type="reset">Cancelar</button>
-                    <a href="/lojinha/index.php" class="btn btn-primary">Voltar</a>
+                    <a href="./TelaDetalhesAnuncio.php" class="btn btn-primary">Voltar</a>
                     <button class="btn btn-success float-right" type="submit">Comprar</button>
                 </div>
             </div>
