@@ -10,18 +10,14 @@
 
 <body>
     <?php
-    readfile("Topo.html");
+use app\dao\AnuncioDao;
+
+readfile("Topo.html");
     require('./../../vendor/autoload.php');
-
-    use app\dao\AnuncioDao;
     $cd = $_GET['anuncio'];
-
     $dao = new AnuncioDao();
     $anuncio = $dao->listarAnuncioporCodigo($cd);
-    echo '<br>';
-    var_dump($anucio);
-   
-    
+ 
     ?>
 
     <div class="container centralizar">
@@ -39,7 +35,7 @@
             <div class="row form-group">
                 <div class="col-md-6">
                     <label>Categoria</label>
-                    <input class="form-control" type="text" name="valor" id="valor" value="<?php echo ($anuncio->nomeCategoria) ?>" readonly>
+                    <input class="form-control" type="text" name="categoria" id="categoria" value="<?php echo ($anuncio->nomeCategoria) ?>" readonly>
 
                 </div>
                 <div class="col-md-6">
@@ -51,6 +47,7 @@
                 <div class="col-md-12">
                     <label>Descrição</label>
                     <input class="form-control" type="text" name="descricao" id="descricao" value="<?php echo ($anuncio->descricao) ?>" readonly>
+                    <input type="hidden" name="codigo" id="codigo" value="<?php echo ($cd) ?>">
                 </div>
             </div>
             <div class="row form-group">

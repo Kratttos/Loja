@@ -1,0 +1,28 @@
+Create Schema PW;
+
+Use Pw;
+
+Create Table TbCategoria(
+    CdCategoria Integer Not Null Primary Key AUTO_INCREMENT,
+    Descricao varchar(255));
+    
+
+Create Table TbAnuncio(
+    CdAnuncio Integer Not Null primary KEY AUTO_INCREMENT,
+   	Titulo Varchar(255) Not NULL,
+    Descricao varchar(4000),
+    Estoque int,
+    Valor Numeric(9,2),
+    CdCategoria int NOT NULL,
+    Foreign KEY (CdCategoria) REFERENCES TbCategoria(CdCategoria));
+    
+
+Create Table TbCompra(
+    CdCompra Integer not Null PRIMARY KEY AUTO_INCREMENT,
+    Cliente Varchar(255) Not NULL,
+    Entregar Varchar(4000),
+    Data date,
+    ValorT numeric(9,2),
+    Quantidade int,
+    CdAnuncio Integer Not NULL,
+    FOREIGN Key (CdAnuncio) REFERENCES TbAnuncio(CdAnuncio));

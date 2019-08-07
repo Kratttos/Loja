@@ -9,7 +9,19 @@
 
 <body>
     <?php
+
+    use app\entidades\Anuncio;
+    require('./../../vendor/autoload.php');
+
     readfile("Topo.html");
+    $anuncio = new Anuncio();
+    $anuncio->CdAnuncio = $_POST['codigo'];
+    $anuncio->titulo = $_POST['titulo'];
+    $anuncio->quantidade = $_POST['quantidade'];
+    $anuncio->valor = $_POST['valor'];
+    $anuncio->nomeCategoria = $_POST['categoria'];
+    $anuncio->descricao = $_POST['descricao'];
+
     ?>
     <div class="container centralizar">
         <form action="../controle/RealizarCompra.php" method="POST">
