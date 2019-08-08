@@ -12,6 +12,7 @@ return array(
     'app\\controle\\IControle' => $baseDir . '/app/controle/IControle.php',
     'app\\dao\\AnuncioDao' => $baseDir . '/app/dao/AnuncioDao.php',
     'app\\dao\\CategoriaDao' => $baseDir . '/app/dao/CategoriaDao.php',
+    'app\\dao\\CompraDao' => $baseDir . '/app/dao/CompraDao.php',
     'app\\dao\\Dao' => $baseDir . '/app/dao/Dao.php',
     'app\\entidades\\Anuncio' => $baseDir . '/app/entidades/Anuncio.php',
     'app\\entidades\\Categoria' => $baseDir . '/app/entidades/Categoria.php',

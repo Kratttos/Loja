@@ -30,7 +30,7 @@
                 <div class="col-md-8">
                     <label>Nome do Cliente</label>
                     <input class="form-control" type="text" name="nome" id="nome" value="">
-                    <input type="hidden" name="codigo" id="codigo" value="">
+                    <input type="hidden" name="cliente" id="cliente" value="">
                 </div>
                 <div class="col-md-4">
                     <label>Quantidade</label>
@@ -46,9 +46,10 @@
                 </div>
                 <div class="col-md-2">
                     <label>Data</label>
+                    <input class="form-control" type="date" name="data" id="data" value="">
                     <input type="hidden" name="codigo" id="codigo" value="<?php echo($anuncio->CdAnuncio) ?>">
-                    <input type="hidden" name="classe" id="classe" value="Compra">
-                    <input type="hidden" name="metodo" id="metodo" value="Inserir">
+                    <input type="hidden" name="class" id="class" value="Compra">
+                    <input type="hidden" name="metodo" id="metodo" value="inserir">
                 </div>
             </div>
             <div class="row form-group">

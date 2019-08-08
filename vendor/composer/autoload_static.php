@@ -27,6 +27,7 @@ class ComposerStaticInit2697d608eaae5e15d0fee874a3223870
         'app\\controle\\IControle' => __DIR__ . '/../..' . '/app/controle/IControle.php',
         'app\\dao\\AnuncioDao' => __DIR__ . '/../..' . '/app/dao/AnuncioDao.php',
         'app\\dao\\CategoriaDao' => __DIR__ . '/../..' . '/app/dao/CategoriaDao.php',
+        'app\\dao\\CompraDao' => __DIR__ . '/../..' . '/app/dao/CompraDao.php',
         'app\\dao\\Dao' => __DIR__ . '/../..' . '/app/dao/Dao.php',
         'app\\entidades\\Anuncio' => __DIR__ . '/../..' . '/app/entidades/Anuncio.php',
         'app\\entidades\\Categoria' => __DIR__ . '/../..' . '/app/entidades/Categoria.php',
