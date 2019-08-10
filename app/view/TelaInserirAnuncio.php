@@ -15,7 +15,7 @@
     use app\dao\CategoriaDao;
     ?>
     <div class="container centralizar">
-        <form action="./../Router.php" method="POST">
+        <form action="./../Router.php" method="POST" id="FormularioInserirAnuncio">
             <div class="row form-group">
                 <div class="col-md-6">
                     <label>Titulo Anuncio</label>
@@ -62,6 +62,12 @@
         </form>
     </div>
 
+
+    <script src="./../js/jquery.js"></script>
+    <script src="./../js/jquery.mask.js"></script>
+    <script src="./../js/jquery.validate.js"></script>
+    <script src="./../js/jquery.maskMoney.js"></script>
+    <script src="./../js/formularioAnuncio.js"></script>
 </body>
 
 </html>

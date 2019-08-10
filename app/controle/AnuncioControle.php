@@ -20,6 +20,8 @@ class AnuncioControle implements IControle
         $dao = new AnuncioDao();
         $dao->inserirAnuncio($anuncio);
 
+
+
         header("location: http://localhost/loja/app/view/TelaAnuncio.php");
         die();
     }
@@ -45,9 +47,9 @@ class AnuncioControle implements IControle
         echo '<br>';
         $dao = new AnuncioDao();
         $dao->alterarAnuncio($anuncio);
-        
+
         header("location: http://localhost/loja/app/view/TelaAnuncio.php");
-        die();    
+        die();
     }
 
     public function excluir()

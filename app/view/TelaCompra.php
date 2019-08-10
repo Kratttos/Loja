@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="./../css/bootstrap.css" />
     <title>Document</title>
 </head>
 
@@ -25,7 +25,7 @@
     $anuncio->descricao = $_POST['descricao'];
     ?>
     <div class="container centralizar">
-        <form action="./../Router.php" method="POST">
+        <form action="./../Router.php" method="POST" id="form">
             <div class="row form-group">
                 <div class="col-md-8">
                     <label>Nome do Cliente</label>
@@ -61,6 +61,12 @@
         </form>
     </div>
 
+
+    <script src="./../js/jquery.js"></script>
+    <script src="./../js/jquery.validate.js"></script>
+    <script src="./../js/jquery.mask.js"></script>
+    <script src="./../js/jquery.maskMoney.js"></script>
+    <script src="./../js/compraFormulario.js"></script>
 </body>
 
 </html>

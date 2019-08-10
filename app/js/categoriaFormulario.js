@@ -1,13 +1,13 @@
-$("#formulario").validate(
+$("#FormCategoria").validate(
 	{
 		rules:{
-			nmCategoria:{
+			descricao:{
 				required:true			   
 			}			
 		}, 
 		messages:{
-			nmCategoria:{
-				required:"Campo obrigatório"
+			descricao:{
+				required:"Por Favor Digite o nome da Categoria"
 			}				   
 		}
 	}

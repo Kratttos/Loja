@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="css/TelaCategoria.css" />
+    <link type="text/css" rel="stylesheet" href="./../css/bootstrap.css" />
     <title>Inserir Categoria</title>
 </head>
 
@@ -13,7 +13,7 @@
     ?>
 
     <div class="container centralizar">
-        <form action="./../Router.php" method="POST" id="Form">
+        <form action="./../Router.php" method="POST" id="FormCategoria">
             <div class="row form-group">
                 <div class="col-md-12">
                     <label>Nome da Categoria</label>
@@ -31,6 +31,11 @@
             <input type="hidden" name="metodo" id="metodo" value="inserir">
         </form>
     </div>
+
+
+    <script src="./../js/jquery.js"></script>
+    <script src="./../js/jquery.validate.js"></script>
+    <script src="./../js/categoriaFormulario.js"></script>
 
 </body>
 
