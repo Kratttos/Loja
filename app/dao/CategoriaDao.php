@@ -10,7 +10,7 @@ class CategoriaDao extends Dao
     public function buscarTodos()
     {
         $con = $this->getConnection();
-        $ps = $con->prepare("Select * From TbCategoria");
+        $ps = $con->prepare("Select * From TbCategoria Where Habilitado = 'V'");
         if ($ps->execute() && $ps->rowCount() > 0) {
             while ($row = $ps->fetch(PDO::FETCH_OBJ)) {
                 $categoria = new Categoria();
@@ -25,16 +25,20 @@ class CategoriaDao extends Dao
 
     public function excluirCategoria($cd)
     {
-        $con = $this->getConnection();
-        $ps = $con->prepare("Delete From TbCategoria Where CdCategoria = ?");
-        $ps->bindParam(1, $cd);
-        $ps->execute();
+        $dao = new AnuncioDao();
+        $qtd = $dao->buscarUso($cd);
+        if ($qtd == 0) {
+            $con = $this->getConnection();
+            $ps = $con->prepare("Update TbCategoria Set Habilitado = 'F' Where CdCategoria = ?");
+            $ps->bindParam(1, $cd);
+            $ps->execute();
+        }
     }
 
     public function inserirCategoria($descricao)
     {
         $con = $this->getConnection();
-        $ps = $con->prepare("Insert Into TbCategoria values (null, ?)");
+        $ps = $con->prepare("Insert Into TbCategoria values (null,'V' ,?)");
         $ps->bindParam(1, $descricao);
         $ps->execute();
     }

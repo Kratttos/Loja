@@ -29,8 +29,7 @@
             <div class="row form-group">
                 <div class="col-md-8">
                     <label>Nome do Cliente</label>
-                    <input class="form-control" type="text" name="nome" id="nome" value="">
-                    <input type="hidden" name="cliente" id="cliente" value="">
+                    <input class="form-control" type="text" name="cliente" id="cliente" value="">
                 </div>
                 <div class="col-md-4">
                     <label>Quantidade</label>

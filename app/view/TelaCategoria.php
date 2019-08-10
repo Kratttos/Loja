@@ -20,7 +20,6 @@
 
     <div class="container">
         <a href="./TelaInserirCategoria.php" class="btn btn-success float-right">Inserir</a>
-        <input type="text" id="myInput" onkeyup="filtrotabela()" placeholder="Procurar Categoria...">
         <table id="myTable">
             <tr class="header">
                 <th style="width:93%;">Descrição</th>

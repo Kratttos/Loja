@@ -1,11 +1,13 @@
-Create Schema PW;
+Create database PW;
 
 Use Pw;
 
 Create Table TbCategoria(
     CdCategoria Integer Not Null Primary Key AUTO_INCREMENT,
+	Habilitado char(1) NOT NULL,
     Descricao varchar(255));
     
+     
 
 Create Table TbAnuncio(
     CdAnuncio Integer Not Null primary KEY AUTO_INCREMENT,
@@ -14,14 +16,16 @@ Create Table TbAnuncio(
     Estoque int,
     Valor Numeric(9,2),
     CdCategoria int NOT NULL,
+    Habilitado char(1) NOT NULL,
     Foreign KEY (CdCategoria) REFERENCES TbCategoria(CdCategoria));
+    
     
 
 Create Table TbCompra(
     CdCompra Integer not Null PRIMARY KEY AUTO_INCREMENT,
     Cliente Varchar(255) Not NULL,
     Entregar Varchar(4000),
-    Data date,
+    DataCompra date,
     ValorT numeric(9,2),
     Quantidade int,
     CdAnuncio Integer Not NULL,

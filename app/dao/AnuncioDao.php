@@ -12,7 +12,7 @@ class AnuncioDao extends Dao
     {
         $con = $this->getConnection();
         $ps = $con->prepare("Select CdAnuncio, Titulo, C.Descricao From TbAnuncio A,TbCategoria C 
-        Where A.CdCategoria = C.CdCategoria");
+        Where A.CdCategoria = C.CdCategoria and A.Habilitado = 'V';");
         if ($ps->execute() && $ps->rowCount() > 0) {
             while ($row = $ps->fetch(PDO::FETCH_OBJ)) {
 
@@ -25,6 +25,22 @@ class AnuncioDao extends Dao
             }
             return $lista;
         }
+    }
+
+    public function buscarUso($cat){
+
+        $con = $this->getConnection();
+        $ps = $con->prepare("Select count(CdAnuncio) as qtd from TbAnuncio Where CdCategoria = ? and Habilitado = 'V';");
+        $ps->bindParam(1,$cat);
+        if ($ps->execute() && $ps->rowCount() > 0) {
+            while ($row = $ps->fetch(PDO::FETCH_OBJ)) {
+                $quantidade = $row->qtd;
+            }
+            return $quantidade;
+        }else{
+            return 0;
+        }
+
     }
 
     public function listarAnuncioporCodigo($codigo)
@@ -70,7 +86,7 @@ class AnuncioDao extends Dao
     public function excluirAnuncio($cd)
     {
         $con = $this->getConnection();
-        $ps = $con->prepare("Delete From TbAnuncio Where CdAnuncio = ?");
+        $ps = $con->prepare("Update TbAnuncio Set Habilitado = 'F' Where CdAnuncio = ?");
         $ps->bindParam(1, $cd);
         $ps->execute();
     }
@@ -78,7 +94,7 @@ class AnuncioDao extends Dao
     public function inserirAnuncio($anuncio)
     {
         $con = $this->getConnection();
-        $ps = $con->prepare("Insert Into TbAnuncio Values (null,? , ? , ? , ? , ?)");
+        $ps = $con->prepare("Insert Into TbAnuncio Values (null,? , ? , ? , ? , ?,'V')");
         $ps->bindParam(1, $anuncio->titulo);
         $ps->bindParam(2, $anuncio->descricao);
         $ps->bindParam(3, $anuncio->quantidade);
