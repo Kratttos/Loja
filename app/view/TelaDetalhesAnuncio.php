@@ -40,7 +40,7 @@ readfile("Topo.html");
                 </div>
                 <div class="col-md-6">
                     <label>Valor</label>
-                    <input class="form-control" type="text" name="valor" id="valor" value="<?php echo ($anuncio->valor) ?>" readonly>
+                    <input class="form-control maskMoney" type="text" name="valor" id="valor" value="<?php echo ($anuncio->valor) ?>" readonly>
                 </div>
             </div>
             <div class="row form-group">
@@ -62,7 +62,9 @@ readfile("Topo.html");
 
     <script src="./../js/jquery.js"></script>
     <script src="./../js/jquery.mask.js"></script>
+    <script src="./../js/jquery.validate.js"></script>
     <script src="./../js/jquery.maskMoney.js"></script>
+    <script src="./../js/formularioAnuncio.js"></script>
 </body>
 
 </html>

@@ -53,7 +53,7 @@
                 </div>
                 <div class="col-md-6">
                     <label>Valor</label>
-                    <input class="form-control" type="text" name="valor" id="valor" value="<?php echo ($ob->valor) ?>">
+                    <input class="form-control maskMoney" type="text" name="valor" id="valor" value="<?php echo ($ob->valor) ?>">
                 </div>
             </div>
             <div class="row form-group">

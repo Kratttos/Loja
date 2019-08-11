@@ -1,13 +1,13 @@
 $(document).ready(
     $(function () {
-        $('#valor').maskMoney({
-            thousands: '.',
-            decimal: ','
-        });
         $('#quantidade').mask('000.000.000', { reverse: true });
 
-    })
-);
+        $('.maskMoney').maskMoney({ allowNegative: false, thousands: '.', decimal: ',' });
+
+        $('.maskMoney').each(function () { // function to apply mask on load!
+            $(this).maskMoney('mask', $(this).val());
+        });   
+}));
 
 $("#FormularioInserirAnuncio").validate(
     {

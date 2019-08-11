@@ -4,6 +4,7 @@ namespace app\controle;
 
 use app\entidades\Compra;
 use app\dao\CompraDao;
+use app\dao\AnuncioDao;
 
 class CompraControle implements IControle
 {
@@ -17,11 +18,26 @@ class CompraControle implements IControle
     $compra->cdanuncio = $_POST['codigo'];
     $compra->data = $_POST['data'];
 
-    $dao = new CompraDao($compra);
-    $dao->inserir($compra);
 
-    header("location: http://localhost/loja/app/view/TelaAnuncio.php");
-    die();
+
+    $dao = new AnuncioDao();
+
+    $quantiaBanco = $dao->checarEstoque($compra->cdanuncio);
+
+    if (($quantiaBanco - $compra->quantidade < 0)) {
+
+      echo('<script> alert("A quantia comprada não pode ser menor que a quantia em estoque");</script>');
+
+      //header("location: http://localhost/loja/app/view/TelaAnuncio.php");
+      die("Tentou Inserir Maior que oq tinha e eu não tinha mensagem pra por aqui");
+    } else {
+
+      $dao = new CompraDao($compra);
+      $dao->inserir($compra);
+
+      header("location: http://localhost/loja/app/view/TelaAnuncio.php");
+      die();
+    }
   }
   public function alterar()
   { }
