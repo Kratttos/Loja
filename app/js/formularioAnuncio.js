@@ -1,49 +1,47 @@
 $(document).ready(
-    $(function () {
+    $(function() {
         $('#quantidade').mask('000.000.000', { reverse: true });
 
         $('.maskMoney').maskMoney({ allowNegative: false, thousands: '.', decimal: ',' });
 
-        $('.maskMoney').each(function () { // function to apply mask on load!
+        $('.maskMoney').each(function() { // function to apply mask on load!
             $(this).maskMoney('mask', $(this).val());
-        });   
-}));
+        });
+    }));
 
-$("#FormularioInserirAnuncio").validate(
-    {
-        rules: {
-            titulo: {
-                required: true
-            },
-            quantidade: {
-                required: true
-            },
-            valor: {
-                required: true
-            },
-            descricao: {
-                required: true
-            }
+$("#FormularioInserirAnuncio").validate({
+    rules: {
+        titulo: {
+            required: true
         },
-        messages: {
-            titulo: {
-                required: "Por Favor Digite o titulo do Anuncio"
-            },
-            quantidade: {
-                required: "Por Favor Digite a Quantidade"
-            },
-            valor: {
-                required: "Por Favor Digite o Valor"
-            },
-            descricao: {
-                required: "Por Favor Digite uma Descrição"
-            }
-
+        quantidade: {
+            required: true
+        },
+        valor: {
+            required: true
+        },
+        descricao: {
+            required: true
         }
-    }
-);
+    },
+    messages: {
+        titulo: {
+            required: "Por Favor Digite o titulo do Anuncio"
+        },
+        quantidade: {
+            required: "Por Favor Digite a Quantidade"
+        },
+        valor: {
+            required: "Por Favor Digite o Valor"
+        },
+        descricao: {
+            required: "Por Favor Digite uma Descrição"
+        }
 
-$("#FormularioInserirAnuncio").submit(function () {
+    }
+});
+
+$("#FormularioInserirAnuncio").submit(function() {
     /**
      * Para Valor Total
      */
@@ -61,8 +59,3 @@ $("#FormularioInserirAnuncio").submit(function () {
 
 
 });
-
-
-
-
-

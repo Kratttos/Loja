@@ -21,7 +21,7 @@ readfile("Topo.html");
     ?>
 
     <div class="container centralizar">
-        <form action="../view/TelaCompra.php" method="POST">
+        <form action="../view/TelaCompra.php" method="POST" id="FormularioInserirAnuncio">
             <div class="row form-group">
                 <div class="col-md-6">
                     <label>Titulo Anuncio</label>

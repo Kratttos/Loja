@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-md-4">
                     <label>Quantidade</label>
-                    <input class="form-control" type="text" name="quantidade" id="quantidade" value="">
+                    <input class="form-control" type="text" name="quantidade" id="quantidade" oninput="calcularValorTotal()" value="">
                 </div>
                 <div class="col-md-8">
                     <label>Entrega</label>
@@ -41,8 +41,8 @@
                 </div>
                 <div class="col-md-2">
                     <label>Valor Total</label>
-                    <input class="form-control maskMoney" type="text" name="valort" id="valort" onkeyup="calcularValorTotal()" value="" readonly>
-                    <input type="hidden" name="valorunit" id="valorunit" value="<?php echo($anuncio->valor) ?>">
+                    <input class="form-control maskMoney" type="text" name="valort"  id="valort"  value="" readonly>
+                    <input type="text" name="valorunit" id="valorunit" value="<?php echo($anuncio->valor) ?>">
                 </div>
                 <div class="col-md-2">
                     <label>Data</label>
