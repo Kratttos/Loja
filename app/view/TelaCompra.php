@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-md-4">
                     <label>Quantidade</label>
-                    <input class="form-control" type="number" name="quantidade" id="quantidade" oninput="calcularValorTotal()" value="" min="1" max="999999">
+                    <input class="form-control" type="number" name="quantidade" id="quantidade" oninput="calcularValorTotal()" value="" min="1" max="<?php echo($anuncio->quantidade); ?>">
                 </div>
                 <div class="col-md-8">
                     <label>Entrega</label>

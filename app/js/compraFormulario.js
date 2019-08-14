@@ -15,7 +15,6 @@ $("#form").validate({
         },
         quantidade: {
             required: true
-
         },
         entrega: {
             required: true
@@ -35,7 +34,7 @@ $("#form").validate({
             required: "Por Favor Digite a Quantidade",
             number: "Por Favor Digite um numero valido",
             min: "Por favor entre com um valor igual ou maior que 1",
-            max: "Por favor entre com um valor menor ou igual a 999.999."
+            max: "A quantidade não pode ser maior do que a quantidade em estoque."
         },
         entrega: {
             required: "Por Favor Digite o local de Entrega"
@@ -61,16 +60,24 @@ $("#form").submit(function() {
 function calcularValorTotal() {
     let quantidade = document.getElementById("quantidade").value;
     let valorunit = $('#valorunit').val();
+    let limite = parseInt($('#quantidade').attr('max'));
 
-    if (quantidade >= 0) {
+    if (quantidade >= 0 && quantidade <= limite) {
         valorunit = parseFloat(valorunit);
         let total = (valorunit * quantidade).toFixed(2);
         $('#valort').val(total);
+
+    } else {
+
+        $('#valort').val(0);
+
     }
+
 
     $('.maskMoney').maskMoney({ allowNegative: false, thousands: '.', decimal: ',' });
 
     $('.maskMoney').each(function() {
         $(this).maskMoney('mask', $(this).val());
     });
+
 }
