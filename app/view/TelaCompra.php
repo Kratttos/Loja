@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="./../css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="./../css/erros.css" />
     <title>Document</title>
 </head>
 
@@ -33,7 +34,7 @@
                 </div>
                 <div class="col-md-4">
                     <label>Quantidade</label>
-                    <input class="form-control" type="text" name="quantidade" id="quantidade" oninput="calcularValorTotal()" value="">
+                    <input class="form-control" type="text" name="quantidade" id="quantidade" oninput="calcularValorTotal()" value="" >
                 </div>
                 <div class="col-md-8">
                     <label>Entrega</label>
