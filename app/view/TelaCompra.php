@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-md-4">
                     <label>Quantidade</label>
-                    <input class="form-control" type="text" name="quantidade" id="quantidade" oninput="calcularValorTotal()" value="" >
+                    <input class="form-control" type="number" name="quantidade" id="quantidade" oninput="calcularValorTotal()" value="" min="1" max="999999">
                 </div>
                 <div class="col-md-8">
                     <label>Entrega</label>

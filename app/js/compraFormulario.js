@@ -1,9 +1,9 @@
 $(document).ready(
-    $(function () {
-        
+    $(function() {
+
         $('.maskMoney').maskMoney({ allowNegative: false, thousands: '.', decimal: ',' });
 
-        $('.maskMoney').each(function () {
+        $('.maskMoney').each(function() {
             $(this).maskMoney('mask', $(this).val());
         });
     }));
@@ -33,7 +33,9 @@ $("#form").validate({
         },
         quantidade: {
             required: "Por Favor Digite a Quantidade",
-
+            number: "Por Favor Digite um numero valido",
+            min: "Por favor entre com um valor igual ou maior que 1",
+            max: "Por favor entre com um valor menor ou igual a 999.999."
         },
         entrega: {
             required: "Por Favor Digite o local de Entrega"
@@ -48,7 +50,7 @@ $("#form").validate({
 });
 
 
-$("#form").submit(function () {
+$("#form").submit(function() {
     /**
      * Para Valor Total
      */
@@ -60,15 +62,15 @@ function calcularValorTotal() {
     let quantidade = document.getElementById("quantidade").value;
     let valorunit = $('#valorunit').val();
 
-    valorunit = parseFloat(valorunit);
-    let total = (valorunit * quantidade).toFixed(2);
-
-
-    $('#valort').val(total);
+    if (quantidade >= 0) {
+        valorunit = parseFloat(valorunit);
+        let total = (valorunit * quantidade).toFixed(2);
+        $('#valort').val(total);
+    }
 
     $('.maskMoney').maskMoney({ allowNegative: false, thousands: '.', decimal: ',' });
 
-    $('.maskMoney').each(function () {
+    $('.maskMoney').each(function() {
         $(this).maskMoney('mask', $(this).val());
     });
 }
