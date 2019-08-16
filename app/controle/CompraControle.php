@@ -27,14 +27,14 @@ class CompraControle implements IControle
     if (($quantiaBanco - $compra->quantidade < 0)) {
 
       
-      header("location: http://localhost/loja/app/view/TelaAnuncio.php");
+      header("location: http://trabalhopw.epizy.com/Loja/app/view/TelaAnuncio.php");
       die("Tentou Inserir Maior que oq tinha e eu não tinha mensagem pra por aqui");
     } else {
 
       $dao = new CompraDao($compra);
       $dao->inserir($compra);
 
-      header("location: http://localhost/loja/app/view/TelaAnuncio.php");
+      header("location: http://trabalhopw.epizy.com/Loja/app/view/TelaAnuncio.php");
       die();
     }
   }

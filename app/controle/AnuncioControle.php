@@ -22,7 +22,7 @@ class AnuncioControle implements IControle
 
 
 
-        header("location: http://localhost/loja/app/view/TelaAnuncio.php");
+        header("location: http://trabalhopw.epizy.com/Loja/app/view/TelaAnuncio.php");
         die();
     }
     public function alterar()
@@ -48,7 +48,7 @@ class AnuncioControle implements IControle
         $dao = new AnuncioDao();
         $dao->alterarAnuncio($anuncio);
 
-        header("location: http://localhost/loja/app/view/TelaAnuncio.php");
+        header("location: http://trabalhopw.epizy.com/Loja/app/view/TelaAnuncio.php");
         die();
     }
 
@@ -59,7 +59,7 @@ class AnuncioControle implements IControle
         $dao = new AnuncioDao();
         $dao->excluirAnuncio($cod);
 
-        header("location: http://localhost/loja/app/view/TelaAnuncio.php");
+        header("location: http://trabalhopw.epizy.com/Loja/app/view/TelaAnuncio.php");
         die();
     }
 }

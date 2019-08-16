@@ -13,7 +13,7 @@ class CategoriaControle implements IControle
         $dao = new CategoriaDao();
         $dao->inserirCategoria($descricao);
 
-        header("location: http://localhost/loja/app/view/TelaCategoria.php");
+        header("location: http://trabalhopw.epizy.com/Loja/app/view/TelaCategoria.php");
         die();
     }
     public function alterar()
@@ -28,7 +28,7 @@ class CategoriaControle implements IControle
         $dao = new CategoriaDao();
         $dao->editarCategoria($categoria);
 
-        header("location: http://localhost/loja/app/view/TelaCategoria.php");
+        header("location: http://trabalhopw.epizy.com/Loja/app/view/TelaCategoria.php");
         die();
     }
 
@@ -39,7 +39,7 @@ class CategoriaControle implements IControle
         $dao = new CategoriaDao;
         $dao->excluirCategoria($cd);
 
-        header("location: http://localhost/loja/app/view/TelaCategoria.php");
+        header("location: http://trabalhopw.epizy.com/Loja/app/view/TelaCategoria.php");
         die();
     }
 }

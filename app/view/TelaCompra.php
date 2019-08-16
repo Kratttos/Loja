@@ -43,7 +43,7 @@
                 <div class="col-md-2">
                     <label>Valor Total</label>
                     <input class="form-control maskMoney" type="text" name="valort"  id="valort"  value="" readonly>
-                    <input type="text" name="valorunit" id="valorunit" value="<?php echo($anuncio->valor) ?>">
+                    <input type="hidden" name="valorunit" id="valorunit" value="<?php echo($anuncio->valor) ?>">
                 </div>
                 <div class="col-md-2">
                     <label>Data</label>
