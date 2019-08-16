@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="./../css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./../css/tabela.css" />
-    <title>Document</title>
+    <title>Lista de Anuncios</title>
 </head>
 
 <body>
@@ -15,8 +15,8 @@
         use app\dao\AnuncioDao;
     ?>
     <div class="container">
-        <a href="./TelaInserirAnuncio.php" class="btn btn-success float-right">Inserir</a>
-        <input type="text" id="myInput" onkeyup="filtrotabela()" placeholder="Procurar Categoria...">
+        <a href="./TelaInserirAnuncio.php" class="btn btn-success float-right mr-2">Inserir</a>
+        <input class="mt-3"type="text" id="myInput" onkeyup="filtrotabela()" placeholder="Procurar Categoria...">
         <table id="myTable">
             <tr class="header">
 

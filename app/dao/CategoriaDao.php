@@ -38,9 +38,34 @@ class CategoriaDao extends Dao
     public function inserirCategoria($descricao)
     {
         $con = $this->getConnection();
-        $ps = $con->prepare("Insert Into TbCategoria values (null,'V' ,?)");
-        $ps->bindParam(1, $descricao);
+
+        if ($this->ChecarSeExiste($descricao)) {
+  
+            $ps = $con->prepare("Update TbCategoria Set Habilitado = 'V' Where Descricao = ?");
+            $ps->bindParam(1, $descricao);
+
+        } else {
+
+            $ps = $con->prepare("Insert Into TbCategoria values (null,'V' ,?)");
+            $ps->bindParam(1, $descricao);
+        }
         $ps->execute();
+    }
+    public function ChecarSeExiste($nome)
+    {
+        $con = $this->getConnection();
+        $ps = $con->prepare("Select count(CdCategoria) as qtd From TbCategoria Where Descricao = ?");
+        $ps->bindParam(1, $nome);
+        if ($ps->execute() && $ps->rowCount() > 0) {
+            $row = $ps->fetch(PDO::FETCH_OBJ);
+            if ($row->qtd > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            die;
+        }
     }
 
     public function editarCategoria($categoria)

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="./../css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./../css/erros.css" />
-    <title>Document</title>
+    <title>Tela de Compras</title>
 </head>
 
 <body>

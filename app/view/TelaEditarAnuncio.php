@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./../css/erros.css" />
-    <title>Document</title>
+    <title>Editar Anuncio</title>
 </head>
 
 <body>

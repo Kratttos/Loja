@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="./../css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="./../css/tabela.css" />
-    <title>Document</title>
+    <title>Lista de Categorias</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     ?>
 
     <div class="container">
-        <a href="./TelaInserirCategoria.php" class="btn btn-success float-right">Inserir</a>
+        <a href="./TelaInserirCategoria.php" class="btn btn-success float-right mb-3 mr-3">Inserir</a>
         <table id="myTable">
             <tr class="header">
                 <th style="width:93%;">Descrição</th>
