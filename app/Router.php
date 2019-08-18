@@ -11,7 +11,7 @@ if (isset($_POST['metodo'])) {
     $metodo = $_GET['metodo'];
 } else {
 
-    header("location: https://i.ytimg.com/vi/b50ft23TPTc/hqdefault.jpg");
+    die();
 }
 
 $classeName = "app\\controle\\" . $class . "Controle";
