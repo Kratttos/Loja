@@ -26,10 +26,7 @@ class CompraControle implements IControle
 
     if (($quantiaBanco - $compra->quantidade < 0)) {
 
-      echo('<script> alert("A quantia comprada não pode ser menor que a quantia em estoque");</script>');
-
-      //header("location: http://localhost/loja/app/view/TelaAnuncio.php");
-      die("Tentou Inserir Maior que oq tinha e eu não tinha mensagem pra por aqui");
+      header("location: http://localhost/loja/app/view/TelaAnuncio.php");
     } else {
 
       $dao = new CompraDao($compra);

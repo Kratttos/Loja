@@ -34,6 +34,7 @@
                 <div class="col-md-4">
                     <label>Quantidade</label>
                     <input class="form-control" type="text" name="quantidade" id="quantidade" value="">
+                    <input type="hidden" id="qtdAnuncio" value="<?php echo($anuncio->quantidade) ?>">
                 </div>
                 <div class="col-md-8">
                     <label>Entrega</label>

@@ -30,3 +30,8 @@ Create Table TbCompra(
     Quantidade int,
     CdAnuncio Integer Not NULL,
     FOREIGN Key (CdAnuncio) REFERENCES TbAnuncio(CdAnuncio));
+
+Create User IF NOT EXISTS 'pw'@'%' identified by '123';
+Grant all privileges on pw.* to 'pw'@'%';
+Flush privileges;
+ALTER USER 'pw'@'%' IDENTIFIED WITH mysql_native_password BY '123'; 

@@ -1,7 +1,7 @@
 $(document).ready(
     $(function () {
         $('#quantidade').mask('000.000.000', { reverse: true });
-  
+
 
 
         $('.maskMoney').maskMoney({ allowNegative: false, thousands: '.', decimal: ',' });
@@ -50,7 +50,7 @@ $("#form").validate(
     }
 );
 
-$("#form").submit(function () {
+$("#form").submit(function (form) {
     /**
      * Para Valor Total
      */
@@ -64,13 +64,18 @@ $("#form").submit(function () {
     let nova = quantidade.replace(".", "");
     $('#quantidade').val(nova);
 
+    if (quantidade > $('#qtdAnuncio').val()) {
+        alert("A quantidade digitada deve ser menor que o total disponivel");
+        form.preventDefault();
+    }
+
 
 });
 /**
  * Essa Desgraça Seta o Valor Total de acordo com a Quantidade colocada
  */
 $("#quantidade").change(function () {
-    let quantidade = document.getElementById("quantidade").value.replace(".","");
+    let quantidade = document.getElementById("quantidade").value.replace(".", "");
     let valorunit = $('#valorunit').val();
     valorunit = parseFloat(valorunit);
     let total = valorunit * quantidade;

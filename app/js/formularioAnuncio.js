@@ -19,7 +19,8 @@ $("#FormularioInserirAnuncio").validate(
                 required: true
             },
             valor: {
-                required: true
+                required: true,
+                min: Number.MIN_VALUE
             },
             descricao: {
                 required: true
@@ -33,7 +34,8 @@ $("#FormularioInserirAnuncio").validate(
                 required: "Por Favor Digite a Quantidade"
             },
             valor: {
-                required: "Por Favor Digite o Valor"
+                required: "Por Favor Digite o Valor",
+                min : "Por Favor digite um valor maior do que 0"
             },
             descricao: {
                 required: "Por Favor Digite uma Descrição"
@@ -59,7 +61,7 @@ $("#FormularioInserirAnuncio").submit(function () {
     var nova = quantidade.replace(".", "");
     $('#quantidade').val(nova);
 
-
+    
 });
 
 

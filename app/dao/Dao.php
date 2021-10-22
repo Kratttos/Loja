@@ -5,8 +5,8 @@ use PDO;
 
 define("NOME_DO_BANCO", "mysql");
 define("BANCO", "pw");
-define("USUARIO", "root");
-define("SENHA", "");
+define("USUARIO", "pw");
+define("SENHA", "123");
 class Dao
 {
     protected $con;
